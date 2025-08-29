@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {margin:0;padding:0;}
+
+body {
+	/*background:#ffffff url(main-bg.jpg) no-repeat top center;*/
+	background: linear-gradient( rgba(0, 0, 0, 0.836), rgba(82, 67, 0, 0.795) ), url('main-bg.jpg'); 
+	/*background-color: rgb(247, 247, 247);*/
+	font:smaller Arial, Helvetica, sans-serif;
+	line-height:2.3em;
+}
+/* ========		layout		============================================================== */
+#wrapper {
+	width:960px;
+	margin:0 auto;
+	padding: 0 0 14px 0;
+	overflow:hidden;
+	font-family: 'Montserrat', Arial;
+}
+#header {
+	float:left;
+	width:960px;
+}
+img.logo {
+	position:absolute;
+	top:5px;
+	z-index:99;
+	background-color: white;
+	border-radius: 100%;
+	padding: 10px;
+}
+/* ========		navigation   	========================================================== */
+#mainnav {
+	float:right;
+	list-style-type:none;
+	display:inline;
+	margin:68px 30px 0 0;
+	font-weight:lighter;
+	overflow:hidden;
+}
+#mainnav li {
+	display:inline;
+	padding:0 !important;
+	font-size:100%;
+}
+#mainnav li a {
+	float:left;
+	text-transform:uppercase;
+	color:#ffffff;
+	text-decoration:none;
+	padding:5px 12px 5px 12px !important;
+	margin: 0 0 0 2px;
+	font-weight: 800;
+	font-size: 10px;
+	transition: 0.5s all ease;
+}
+#mainnav li a:hover {
+	color:#ecd712;
+	}
+#mainnav li.current a:link {
+	/*background: transparent url(nav-bg.png) repeat-x top left;*/
+	background-color: white;
+	color:#dfca10;
+	border-radius: 10px 10px 0 0;
+	}
+#mainnav li.current a:visited {
+	background: transparent url(nav-bg.png) repeat-x top left;
+	color:#e2a74f;
+	}
+
+/* ========		content		============================================================== */
+#content {
+	float:left;
+	/*background: transparent url(slideshow-bg.png) repeat-x top left;*/
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103), 0 6px 20px 0 rgba(0, 0, 0, 0.253);
+	width:860px;
+	min-height:377px;
+	padding:10px;
+	margin:0 0 20px 50px;
+	border-radius: 0 0 20px 20px;
+	}
+
+.slider{
+	margin:0px auto;
+	max-width:1024px;
+	border-radius: 50px;
+}
+
+/* ========		footer		============================================================== */
+#footer {
+	width:880px;
+	padding:0 0 0 50px;
+	color:#ffffff;
+	font-size:100%;
+	text-align:center;
+}
+#footer img {
+	margin:10px 0 4px;	
+}
+/* ================================================================== */
+
+#fb{
+	float:right;
+}
+
+#gallerycontainer{
+	position:relative;
+	height:auto;
+	/*background: url("bkg-pat.png") repeat scroll 0 0 #F5F5F5;*/
+    color: #000;
+    font: 12px/1.5em Arial,Helvetica,sans-serif,"Arial Narrow";
+}
+#gallerycontainer2{
+	position:relative;
+	height:500px;
+	background: url("bkg-pat.png") repeat scroll 0 0 #F5F5F5;
+    color: #000;
+    font: 12px/1.5em Arial,Helvetica,sans-serif,"Arial Narrow";
+}
+.clearfix{
+	clear:both;
+}
+
+/* ========  sigup/login	============================================================== */
+.login{
+	overflow:hidden;
+	background:#ECBD2F;
+	padding:8px;
+}
+.login table{
+	float:right;
+}
+.form{
+	overflow:hidden;
+	padding:10px;
+}
+.form table{
+	margin-top:18px;
+	float:left;
+}
+#email, #pw, #cpw{
+	width:317px;
+	padding:8px;
+}
+#fname, #lname{
+	width:148px;
+	padding:8px;
+}
+#submit{
+	width:140px;
+	padding:10px;
+}
+#submit:hover{
+	background:#ECBD2F;
+	border-radius:5px;
+}
+h1{
+	font:Tahoma, Geneva, sans-serif;
+	font-size:15px;
+}
+h2{
+	font:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#F00;
+	padding:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+h3{
+	font:"Courier New", Courier, monospace;
+	font-size:14px;
+	color:#666;
+	padding:3px;
+	margin:0px;
+}
+#login_email, #login_password{
+	width:150px;
+	padding:5px;
+	font:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+}
+
+/* ========  date&time	============================================================== */
+#right{
+	float:right;
+}
+
+/* --- Responsive Styles --- */
+
+@media (max-width: 768px) {
+  #wrapper, #footer {
+    width: 87%;
+    padding: 0 20px;
+	margin: 2px;
+	border-radius: 20px 20px 0 0;
+  }
+  #header{
+	width: 100%
+  }
+  #content {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 8px;
+  }
+  #mainnav {
+    float: none;
+    margin: 20px 0 0 0;
+    text-align: center;
+    display: block;
+  }
+  #mainnav li {
+    display: inline-block;
+    margin: 0;
+	font-size: 2px;
+  }
+  img.logo {
+    position: static;
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+  }
+  #footer {
+    padding: 10px 0;
+    font-size: 95%;
+  }
+  #gallerycontainer2 {
+    height: auto;
+    min-height: 200px;
+  }
+}
+
