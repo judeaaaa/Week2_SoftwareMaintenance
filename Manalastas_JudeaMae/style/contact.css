@@ -1,0 +1,105 @@
+.contact-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.contact-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.message-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    color: #009900;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #009900;
+    box-shadow: 0 0 0 3px rgba(0, 153, 0, 0.1);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #009900;
+    box-shadow: 0 0 0 3px rgba(0, 153, 0, 0.1);
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #009900, #00cc00);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 140px;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #008800, #00bb00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 153, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .contact-form-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info,
+    .message-form {
+        padding: 20px;
+    }
+}

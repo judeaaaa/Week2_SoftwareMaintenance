@@ -1,3 +1,7 @@
+<?php
+include 'php_includes/connection.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,64 +16,81 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <h1><a href="index.php"><img src="images/logo.png" class="logo" alt="Dimple Star Transport" /></a></h1>
-            <ul id="mainnav">
-                <li class="current"><a href="index.php">Home</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="terminal.php">Terminals</a></li>
-                <li><a href="routeschedule.php">Routes / Schedules</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="book.php">Book Now</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <div id="gallerycontainer">
-                <div style="margin:10 auto; padding:30px 20px 20px 20px;">
-                    <div class="login">
-                        <div id="right">
-                            <?php
-							session_start();
-							if(isset($_SESSION['email'])){
-								$email = $_SESSION['email'];
-								echo "Welcome,". $email. "!";
-								echo "<a href='logout.php'>Logout</a>";
-							}
-							if(empty($email)){
-								echo "<a href='signlog.php'>SignUp / Login</a>.";
-							}?>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <div id="amazingslider-1">
-                            <ul class="amazingslider-slides" style="display:none;">
-                                <li><img src="slide/images/b1.png" /> </li>
-                                <li><img src="slide/images/b2.png" /></li>
-                                <li><img src="slide/images/b3.png" /></li>
-                                <li><img src="slide/images/b4.png" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    Contact us at:
-                    <h2>0929 209 0712</h2>
-                    Block 1 lot 10, southpoint Subd.<br>
-                    Brgy Banay-Banay, Cabuyao, Laguna<br>
+    <?php include 'navbar.php'; ?>
 
-                    <div id="right">
-                        <h3><?php include_once("php_includes/date_time.php"); ?></h3>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Dimple St★r Transport</h1>
+            <p class="hero-subtitle">Your trusted partner for safe and comfortable bus travel</p>
+            <a href="book.php" class="cta-button">Book Your Journey</a>
+        </div>
+    </div>
+
+    <div class="main-container" style="margin-top: 1rem;">
+        <div class="content-section">
+            <div class="login-status">
+                <?php
+                if (isset($_SESSION['email'])) {
+                    $email = $_SESSION['email'];
+                    echo "Welcome, " . $email . "!";
+                    echo "<a href='logout.php'>Logout</a>";
+                } else {
+                    echo "Ready to travel? <a href='signlog.php'>Sign Up / Login</a>";
+                }
+                ?>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div id="amazingslider-1">
+                        <ul class="amazingslider-slides" style="display:none;">
+                            <li><img src="slide/images/b1.png" alt="Bus Service 1" /></li>
+                            <li><img src="slide/images/b2.png" alt="Bus Service 2" /></li>
+                            <li><img src="slide/images/b3.png" alt="Bus Service 3" /></li>
+                            <li><img src="slide/images/b4.png" alt="Bus Service 4" /></li>
+                        </ul>
                     </div>
-                    <div class="column-clear"></div>
                 </div>
-                <div class="clearfix"></div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><img src="images/icon/bus.png"></div>
+                    <h3 class="feature-title">Comfortable Buses</h3>
+                    <p class="feature-description">Modern, well-maintained buses with comfortable seating and air conditioning for your journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><img src="images/icon/clock.png"></div>
+                    <h3 class="feature-title">On-Time Service</h3>
+                    <p class="feature-description">Reliable schedules and punctual departures to get you to your destination on time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><img src="images/icon/protect.png"></div>
+                    <h3 class="feature-title">Safe Travel</h3>
+                    <p class="feature-description">Experienced drivers and regular vehicle maintenance ensure your safety throughout the journey.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><img src="images/icon/money.png"></div>
+                    <h3 class="feature-title">Affordable Rates</h3>
+                    <p class="feature-description">Competitive pricing without compromising on quality and comfort of service.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h2 class="contact-title">Contact Us</h2>
+                <div class="phone-number">0929 209 0712</div>
+                <div class="address">
+                    Block 1 lot 10, Southpoint Subdivision<br>
+                    Brgy Banay-Banay, Cabuyao, Laguna
+                </div>
+                <div class="datetime-display">
+                    <?php include_once("php_includes/date_time.php"); ?>
+                </div>
             </div>
         </div>
-        <div id="footer">
-            <p>&copy; Dimple Star Transport<br /></p>
-        </div>
-
     </div>
 </body>
-
+<footer class="footer">
+    <div class="copyright">© Dimple Star Transport</div>
+</footer>
 </html>

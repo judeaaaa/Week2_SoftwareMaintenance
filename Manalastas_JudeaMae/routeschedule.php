@@ -1,93 +1,74 @@
+<?php
+include 'php_includes/connection.php';
+?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dimple Star Transport</title>
-<link rel="stylesheet" type="text/css" href="style/style.css" />
-<link rel="icon" href="images/icon.ico" type="image/x-con">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Route Schedule - Dimple Star Transport</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/routeschedule.css" />
+    <link rel="icon" href="images/icon.ico" type="image/x-con">
 </head>
+
 <body>
-<div id="wrapper">
-	<div id="header">
-    <h1><a href="index.php"><img src="images/logo.png" class="logo" alt="Dimple Star Transport" /></a></h1>
-        <ul id="mainnav">
-			<li><a href="index.php">Home</a></li>
-			<li><a href="about.php">About Us</a></li>
-            <li><a href="terminal.php">Terminals</a></li>
-			<li class="current"><a href="routeschedule.php">Routes / Schedules</a></li>
-            <li><a href="contact.php">Contact</a></li>
-			<li><a href="book.php">Book Now</a></li>
-	</div>
-    <div id="content">
-    	<div id="gallerycontainer">
-			<div style="margin:0 auto; padding:30px 20px 20px 20px; width:820px;">
-				<div class="login">
-						<div id="right">
-							<?php
-								session_start();
-								if(isset($_SESSION['email'])){
-									$email = $_SESSION['email'];
-									echo "Welcome,". $email. "!";
-									echo "<a href='logout.php'>Logout</a>";
-								}
-								if(empty($email)){
-									echo "<a href='signlog.php'></a>.";
-								}?>
-						</div>
-					</div>
-				<div id="right">
-					<h3><?php include_once("php_includes/date_time.php"); ?></h3>
-				</div>
-				<img src="images/route.png" / width="820">
-				<h2>(All trips are vice versa)</h2><hr>
-				<table style="width:70%">
-				  <tr>
-					<br>
-					<td><h3>Origin</h3></td>
-					<td><h3>Regular Schedule</h3></td>		
-					<td><h3>Destination</h3></td>
-				  </tr>
-				  <tr>
-					<td>Ali Mall Cubao Terminal</td>
-					<td>9:00 am / 10:00 am / 1:00 pm / 4:00pm</td>		
-					<td>San Jose</td>
-				  </tr>
-				  <tr>
-					<td>Alabang Terminal</td>
-					<td>6:00 am / 7:00 am / 2:00 pm / 6:00 pm / 10:00 pm</td>	
-					<td>San Jose</td>
-				  </tr>
-				  <tr>
-					<td>Cabuyao Terminal</td>
-					<td>8:00 am / 9:00 am / 4:00 pm / 8:00 pm</td>		
-					<td>San Jose</td>
-				  </tr>
-				  <tr>
-					<td>Espana Terminal</td>
-					<td>4:30 am / 5:30 am / 12:00 am / 4:00 pm / 8:00 pm</td>	
-					<td>San Jose</td>
-				  </tr>
-				  <tr>
-					<td>San Lazaro Terminal</td>
-					<td>3:00 am / 4:30 am / 11:00 am / 3:00 pm / 7:00 pm</td>	
-					<td>San Jose</td>
-				  </tr>
-				  <tr>
-					<td>Pasay Terminal</td>
-					<td>5:00 am / 6:00 am / 1:00 pm / 3:00pm</td>	
-					<td>San Jose</td>
-				  </tr>
-				</table>
-				<div class="column-clear"></div>
+    <?php include 'navbar.php'; ?>
+
+    <div class="main-container">
+        <div class="content-section">
+
+            <h1 class="content-title">ROUTE SCHEDULE</h1>
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <img src="images/route.png" alt="Route Map" class="route-map">
+                <h2 class="route-note">(All trips are vice versa)</h2>
             </div>
-				<div class="clearfix"></div>
+
+            <div class="schedule-table-container">
+                <table class="schedule-table">
+                    <tr>
+                        <th><h3>Origin</h3></th>
+                        <th><h3>Regular Schedule</h3></th>
+                        <th><h3>Destination</h3></th>
+                    </tr>
+                    <tr>
+                        <td class="terminal-name">Ali Mall Cubao Terminal</td>
+                        <td>9:00 am / 10:00 am / 1:00 pm / 4:00pm</td>
+                        <td class="destination-name">San Jose</td>
+                    </tr>
+                    <tr>
+                        <td class="terminal-name">Alabang Terminal</td>
+                        <td>6:00 am / 7:00 am / 2:00 pm / 6:00 pm / 10:00 pm</td>
+                        <td class="destination-name">San Jose</td>
+                    </tr>
+                    <tr>
+                        <td class="terminal-name">Cabuyao Terminal</td>
+                        <td>8:00 am / 9:00 am / 4:00 pm / 8:00 pm</td>
+                        <td class="destination-name">San Jose</td>
+                    </tr>
+                    <tr>
+                        <td class="terminal-name">Espana Terminal</td>
+                        <td>4:30 am / 5:30 am / 12:00 am / 4:00 pm / 8:00 pm</td>
+                        <td class="destination-name">San Jose</td>
+                    </tr>
+                    <tr>
+                        <td class="terminal-name">San Lazaro Terminal</td>
+                        <td>3:00 am / 4:30 am / 11:00 am / 3:00 pm / 7:00 pm</td>
+                        <td class="destination-name">San Jose</td>
+                    </tr>
+                    <tr>
+                        <td class="terminal-name">Pasay Terminal</td>
+                        <td>5:00 am / 6:00 am / 1:00 pm / 3:00pm</td>
+                        <td class="destination-name">San Jose</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-    
-<div id="footer">
-	<p>&copy;Dimple Star Transport<br /></p>
-</div>
-
-</div>
 </body>
+<footer class="footer">
+    <div class="copyright">© Dimple Star Transport</div>
+</footer>
 </html>
