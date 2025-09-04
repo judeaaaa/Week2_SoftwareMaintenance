@@ -20,7 +20,7 @@ include 'php_includes/connection.php';
 
     <div class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">Dimple St★r Transport</h1>
+            <h1 class="hero-title">DIMPLE ST★R TRANSPORT</h1>
             <p class="hero-subtitle">Your trusted partner for safe and comfortable bus travel</p>
             <a href="book.php" class="cta-button">Book Your Journey</a>
         </div>
@@ -76,15 +76,32 @@ include 'php_includes/connection.php';
                 </div>
             </div>
 
-            <div class="contact-info">
-                <h2 class="contact-title">Contact Us</h2>
-                <div class="phone-number">0929 209 0712</div>
-                <div class="address">
-                    Block 1 lot 10, Southpoint Subdivision<br>
-                    Brgy Banay-Banay, Cabuyao, Laguna
-                </div>
-                <div class="datetime-display">
-                    <?php include_once("php_includes/date_time.php"); ?>
+            <!-- Updated Contact Section with Map -->
+            <div class="contact-section">
+                <h2 class="content-title" style="color: white;">Contact Us</h2>
+                <div class="contact-map-container">
+                    <div class="contact-info-left">
+                        <div class="phone-number">0929 209 0712</div>
+                        <div class="address">
+                            Block 1 lot 10, Southpoint Subdivision<br>
+                            Brgy Banay-Banay, Cabuyao, Laguna
+                        </div>
+                        <div class="datetime-display">
+                            <?php include_once("php_includes/date_time.php"); ?>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container-right">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.033835727117!2d121.11530217599846!3d14.45457507796655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c07864f6f2c1%3A0x5c38d3f47b75d8b8!2sBanay-Banay%2C%20Cabuyao%2C%20Laguna!5e0!3m2!1sen!2sph!4v1691500000000!5m2!1sen!2sph" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 8px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>

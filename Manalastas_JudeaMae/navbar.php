@@ -3,7 +3,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
 <link rel="stylesheet" type="text/css" href="style/navbar.css">
-
 <nav class="modern-navbar">
     <div class="nav-container">
         <!-- Left Side -->

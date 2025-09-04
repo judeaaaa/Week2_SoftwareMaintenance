@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
 
 body {
-    background: white;
+    background: rgb(252, 248, 240);
     font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .hero-section {
@@ -98,7 +98,7 @@ body {
 }
 
 .main-container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     padding: 0 20px;
     margin-top: 5rem;
@@ -114,6 +114,7 @@ body {
 }
 
 .content-section {
+    background-color: white;
     margin: 40px auto;
     padding: 40px 40px;
     border-radius: 20px;
@@ -135,13 +136,13 @@ body {
     margin: 40px 0;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
 }
 
 .slider {
     margin: 0 auto;
-    max-width: 90%;
-    border-radius: 15px;
+    max-width: 80%;
+    border-radius: 20px;
     height: 37rem;
 }
 
@@ -199,6 +200,55 @@ body {
     line-height: 1.6;
 }
 
+.contact-section {
+    margin: 100px 0 0 0;
+    padding: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: #4eb54e;
+    background: radial-gradient(circle,rgba(78, 181, 78, 1) 0%, rgba(86, 194, 70, 1) 44%, rgba(240, 224, 108, 1) 72%, rgba(232, 223, 193, 1) 100%);
+    border-radius: 10px;
+}
+
+.contact-map-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info-left {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map-container-right {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .contact-map-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-info-left,
+    .map-container-right {
+        padding: 20px;
+    }
+}
+
+/*
 .contact-info {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     padding: 40px;
@@ -212,19 +262,19 @@ body {
     color: #009900;
     margin-bottom: 20px;
     font-weight: 700;
-}
+}*/
 
 .phone-number {
-    font-size: 2.5rem;
-    color: #009900;
+    font-size: 2rem;
+    color: #535353;
     font-weight: 800;
-    margin: 20px 0;
+    margin: 10px 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .address {
     font-size: 1.1rem;
-    color: #555;
+    color: #262626;
     line-height: 1.8;
     margin: 20px 0;
 }

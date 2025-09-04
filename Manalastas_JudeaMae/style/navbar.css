@@ -6,17 +6,23 @@
 }
 
 .modern-navbar {
-    background: #ffffff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.186);
+    background: rgb(255, 255, 255);
+    box-shadow: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    transition: all 0.3s ease; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.modern-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.633); 
+    backdrop-filter: blur(10px); 
 }
 
 .nav-container {
-    max-width: 1300px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -76,7 +82,7 @@
 
 .book-btn {
     background: #009900;
-background: linear-gradient(153deg, rgba(0, 153, 0, 1) 0%, rgba(228, 235, 183, 1) 100%);
+    background: linear-gradient(153deg, rgba(0, 153, 0, 1) 0%, rgba(228, 235, 183, 1) 100%);
     color: white;
     text-decoration: none;
     padding: 12px 25px;
@@ -263,7 +269,7 @@ background: linear-gradient(153deg, rgba(0, 153, 0, 1) 0%, rgba(228, 235, 183, 1
 }
 
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     #wrapper {
         padding-top: 6rem;
     }

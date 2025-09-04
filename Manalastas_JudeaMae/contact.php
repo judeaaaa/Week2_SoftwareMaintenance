@@ -22,15 +22,26 @@ include 'php_includes/connection.php';
             
             <div class="contact-form-container">
                 <div class="contact-info">
-                    <h3>Company Information</h3>
+                    <h3 class="form-title">Company Information</h3>
+                    <center>
                     <p>
                         <strong>Dimple Star Transport</strong><br>
                         Block 1 lot 10, Southpoint Subd.<br>
                         Brgy Banay-Banay, Cabuyao, Laguna<br>
                         Phone: 0929 209 0712
                     </p>
-                    <div class="datetime-display" style="margin-top: 20px;">
-                        <?php include_once("php_includes/date_time.php"); ?>
+                    </center>
+
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.033835727117!2d121.11530217599846!3d14.45457507796655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c07864f6f2c1%3A0x5c38d3f47b75d8b8!2sBanay-Banay%2C%20Cabuyao%2C%20Laguna!5e0!3m2!1sen!2sph!4v1691500000000!5m2!1sen!2sph" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 8px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
                 
@@ -43,7 +54,7 @@ include 'php_includes/connection.php';
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email:</label>
-                            <input id="email" class="form-input" placeholder="Example: aaron@gwaps.com" type="email" name="email" required />
+                            <input id="email" class="form-input" placeholder="Example: juandelacruz@gmail.com" type="email" name="email" required />
                         </div>
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject:</label>
